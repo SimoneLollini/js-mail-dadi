@@ -1,6 +1,30 @@
 //mail
 //Chiedi all’utente la sua email
 //prompt
+
+const userEmail = prompt('Inserisci la tua email')
+console.log(userEmail);
+
+// creo una lista di persore che possono accedere con array
+
+
+const validatedEmails = ["pippo", "pluto", "paperino"]
+let isValid = false
+for (let i = 0; i < validatedEmails.length; i++) {
+    // console.log(validatedEmails[i]);
+    //con if statment verifica se l'email inserita è uguale a un elemento nella lista array accedi al gioco 
+    if (userEmail == validatedEmails[i]) {
+        isValid = true
+    }
+}
+
+console.log(isValid);
+if (isValid == true) {
+    console.log("Gioca!");
+} else {
+    console.log("Mi dispiace non puoi giocare!");
+}
+
 //controlla che sia nella lista di chi può accedere
 //verifico con if statement se l'email è presente nella mia lista 
 //array con email partecipanti
