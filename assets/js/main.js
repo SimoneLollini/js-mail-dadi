@@ -20,8 +20,12 @@ for (let i = 0; i < validatedEmails.length; i++) {
 
 console.log(isValid);
 if (isValid == true) {
+    const giocaOra = `<p>Gioca!</p> <button class="btn btn-light">Lancia il dado!</button>`
+    document.querySelector('.validation').innerHTML = giocaOra
     console.log("Gioca!");
 } else {
+    const nomeErrato = `<p>Mi dispiace, non sei nella lista giocatori!</p> <button class="btn btn-light">Riprova!</button>`
+    document.querySelector('.validation').innerHTML = nomeErrato
     console.log("Mi dispiace non puoi giocare!");
 }
 
