@@ -20,7 +20,7 @@ for (let i = 0; i < validatedEmails.length; i++) {
 
 console.log(isValid);
 if (isValid == true) {
-    const giocaOra = `<p>Gioca!</p> <button class="btn btn-light">Lancia il dado!</button>`
+    const giocaOra = `<p>Gioca</p> <button class="btn btn-light">Lancia dado!</button>`
     document.querySelector('.validation').innerHTML = giocaOra
     console.log("Gioca!");
 } else {
@@ -41,3 +41,18 @@ if (isValid == true) {
 //Math.floor(Math.random() * 10) + 1;
 //chi fa il punteggio più alto vince.
 //decretare il numero più alto con if statement
+
+const pcNumber = Math.ceil(Math.random() * 6);
+const playerNumber = Math.ceil(Math.random() * 6);
+
+console.log(pcNumber, playerNumber);
+let winner;
+if (pcNumber > playerNumber) {
+    winner = "pc"
+} else if (playerNumber > pcNumber) {
+    winner = "player"
+} else {
+    winner = "both"
+
+}
+console.log("Vince " + winner);
